@@ -1,9 +1,8 @@
 # SQL-Hierarchy-project
-This project consists of SQL code that:
--Builds a hierarchy with a list of folder paths.
--Evaluates branch dates and assign newer/older ones to parent nodes.
+In the world of organizations and computers we can find several situations in which we have to deal with hierarchy data. The task usually consists of identifying the hierarchy, making operations and creating a visual representations of the nodes structure. If we deal with a high volumes of data we want to do this in a specially efficient way.
 
-It was ran on a database of 11 million rows which has to be done in 2 sets so the ram usage would not be exceeded.
+In this project I share code to make these 3 tasks with high volumes of data (11 million rows). SQL code to identify the hierarchy and make operations. Python code to create a representation of the biggest part of the tree possible.
 
-The development consists of 2 steps. First, identifying branches and hierarchy levels out of the folder path. Secondly, a loop that
-evaluates all the values on a hierarchy level at a time and assigns to the upper level the resulting values.
+The SQL process consists of 2 steps:
+- First, identifying branches and hierarchy levels out of the folder path string.
+- Secondly, a loop that evaluates all the values on a hierarchy level at a time and assigns to the upper level the calculated values (in this case max and min date values).
